@@ -120,7 +120,7 @@ Run the Flyte workflows for data ingestion and preprocessing:
     ```bash
     flyte-cli run workflow data_ingestion
     flyte-cli run workflow data_preprocessing
-```
+    ```
 
 2.	Model Training and Deployment:
 Execute the model training and deployment workflows:
@@ -128,12 +128,12 @@ Execute the model training and deployment workflows:
     ```bash
     flyte-cli run workflow model_training
     flyte-cli run workflow model_deployment
-```
+    ```
     
 3.	Model Monitoring and Retraining:
 Start monitoring the deployed model and trigger retraining if necessary:
 
-    ```bash
+```bash
     flyte-cli run workflow performance_monitoring
     flyte-cli run workflow model_retraining
 ```
