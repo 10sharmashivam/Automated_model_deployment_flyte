@@ -68,7 +68,7 @@ By using Flyte for orchestration, this project demonstrates advanced MLOps pract
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/flyte-ml-lifecycle.git
+   git clone https://github.com/10sharmashivam/Automated_model_deployment_flyte.git
    cd flyte-ml-lifecycle
 
 2. Install the required Python packages:
@@ -108,10 +108,10 @@ Start monitoring the deployed model and trigger retraining if necessary:
 4.	Auto-scaling:
 Kubernetes will automatically scale the model serving based on the load, as configured in the auto_scaling.py workflow.
 
-CI/CD with GitHub Actions
+### CI/CD with GitHub Actions
 
 The project includes pre-configured CI/CD pipelines for continuous integration and deployment. Ensure you have set up GitHub Actions in the .github/workflows directory to trigger on commits to your repository.
 
-Contribution
+### Contribution
 
 Feel free to contribute by opening issues, suggesting features, or submitting pull requests. For any help, open an issue or reach out to the project maintainers.    
