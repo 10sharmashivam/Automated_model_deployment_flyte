@@ -74,6 +74,7 @@ By using Flyte for orchestration, this project demonstrates advanced MLOps pract
 │   ├── data_exploration.ipynb  # Notebook for initial data exploration
 │   └── model_tuning.ipynb      # Notebook for tuning and model testing
 └── requirements.txt            # List of Python dependencies
+```
 
 ## Getting Started
 
@@ -94,19 +95,22 @@ By using Flyte for orchestration, this project demonstrates advanced MLOps pract
 
 1. Clone this repository to your local machine:
 
-   ```bash
+```bash
    git clone https://github.com/10sharmashivam/Automated_model_deployment_flyte.git
    cd FlyteMLOpsPipelineDesign
+```
 
 2. Install the required Python packages:
 
-    ```bash
+```bash
     pip install -r requirements.txt
+```
 
 3.	Set up your Flyte environment by configuring Flyte with cloud credentials:
 
-    ```bash
+```bash
     flyte-cli register --project <your-flyte-project> --domain <your-flyte-domain>
+```
 
 ### Running the Project
 
@@ -116,7 +120,7 @@ Run the Flyte workflows for data ingestion and preprocessing:
     ```bash
     flyte-cli run workflow data_ingestion
     flyte-cli run workflow data_preprocessing
-    ```
+```
 
 2.	Model Training and Deployment:
 Execute the model training and deployment workflows:
@@ -124,6 +128,7 @@ Execute the model training and deployment workflows:
     ```bash
     flyte-cli run workflow model_training
     flyte-cli run workflow model_deployment
+```
     
 3.	Model Monitoring and Retraining:
 Start monitoring the deployed model and trigger retraining if necessary:
@@ -131,6 +136,7 @@ Start monitoring the deployed model and trigger retraining if necessary:
     ```bash
     flyte-cli run workflow performance_monitoring
     flyte-cli run workflow model_retraining
+```
 
 4.	Auto-scaling:
 Kubernetes will automatically scale the model serving based on the load, as configured in the auto_scaling.py workflow.
