@@ -32,20 +32,47 @@ By using Flyte for orchestration, this project demonstrates advanced MLOps pract
 
 ## Project Structure
 
+```bash
 ├── README.md                  # Project overview, instructions
 ├── flyte_config/               # Flyte-specific configurations and custom plugins
 │   ├── flyte.yaml              # Flyte configuration file for project setup
 │   ├── workflows/              # Custom Flyte workflows
+│   │   ├── data_ingestion.py   # Workflow for automating data ingestion
+│   │   ├── preprocessing.py    # Workflow for data preprocessing
+│   │   ├── model_training.py   # Workflow for model training and tuning
+│   │   ├── model_deployment.py # Workflow for deploying models
+│   │   ├── monitoring.py       # Workflow for performance monitoring and retraining
+│   │   └── auto_scaling.py     # Workflow for auto-scaling model serving
 │   └── tasks/                  # Reusable Flyte tasks
+│       ├── data_ingestion.py   # Task for data pulling and processing
+│       ├── feature_engineering.py # Feature engineering tasks
+│       ├── hyperparameter_tuning.py # Task for hyperparameter optimization
+│       └── model_serving.py    # Task for model inference
 ├── src/                        # Main source code for machine learning components
 │   ├── preprocessing/          # Preprocessing pipeline scripts
+│   │   ├── clean_data.py       # Data cleaning
+│   │   └── feature_extraction.py # Feature extraction
 │   ├── model_training/         # Training scripts and model code
-│   └── deployment/             # Deployment related code (API, CI/CD)
+│   │   ├── train_model.py      # Model training code
+│   │   ├── hyperparameter_search.py # Hyperparameter optimization code
+│   │   └── evaluation.py       # Model evaluation script
+│   ├── deployment/             # Deployment related code (API, CI/CD)
+│   │   ├── deploy_model.py     # Deployment pipeline script
+│   │   └── api_inference.py    # REST API for model inference
+│   ├── monitoring/             # Scripts for monitoring and feedback loop
+│   │   ├── performance_monitor.py # Script for model monitoring
+│   │   └── retrain.py          # Trigger retraining based on performance
 ├── config/                     # Config files for cloud, Kubernetes, etc.
+│   ├── aws_config.yaml         # AWS/GCP configurations (for deployment)
+│   ├── kubernetes_config.yaml  # Kubernetes config for auto-scaling
+│   └── flyte_config.yaml       # Flyte-specific configuration
 ├── Dockerfile                  # Dockerfile to containerize the environment
 ├── .github/                    # GitHub Actions for CI/CD
-│   └── workflows/              # GitHub Actions workflows for CI/CD
+│   ├── workflows/              # GitHub Actions workflows for CI/CD
+│   │   └── ci_cd.yaml          # Define CI/CD pipeline for deployment
 ├── notebooks/                  # Jupyter notebooks for experimentation
+│   ├── data_exploration.ipynb  # Notebook for initial data exploration
+│   └── model_tuning.ipynb      # Notebook for tuning and model testing
 └── requirements.txt            # List of Python dependencies
 
 ## Getting Started
