@@ -69,7 +69,7 @@ By using Flyte for orchestration, this project demonstrates advanced MLOps pract
 
    ```bash
    git clone https://github.com/10sharmashivam/Automated_model_deployment_flyte.git
-   cd flyte-ml-lifecycle
+   cd FlyteMLOpsPipelineDesign
 
 2. Install the required Python packages:
 
